@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mhacks::Application.load_tasks
+JOIN::Application.load_tasks
