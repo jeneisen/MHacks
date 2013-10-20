@@ -417,3 +417,551 @@ Processing by ProjectsController#show as HTML
   [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "2"]]
   Rendered projects/show.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2013-10-20 17:01:37 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (70.2ms)
+Completed 500 Internal Server Error in 151ms
+
+ActionView::Template::Error (undefined local variable or method `painting' for #<#<Class:0x007f88b1eb5a50>:0x007f88b1ebadc0>):
+    10:   <%= @project.description %>
+    11: </p>
+    12: <div>
+    13:   <%= image_tag project.image_url(:thumb) if painting.image? %>
+    14: </div>
+    15: 
+    16: 
+  app/views/projects/show.html.erb:13:in `_app_views_projects_show_html_erb___1865845121418625214_70112537517760'
+  app/controllers/projects_controller.rb:18:in `show'
+
+
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2013-10-20 17:01:50 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x007f88b1eb5a50>:0x007f88b1efa510>):
+    10:   <%= @project.description %>
+    11: </p>
+    12: <div>
+    13:   <%= image_tag project.image_url(:thumb) if project.image? %>
+    14: </div>
+    15: 
+    16: 
+  app/views/projects/show.html.erb:13:in `_app_views_projects_show_html_erb___1865845121418625214_70112537890780'
+  app/controllers/projects_controller.rb:18:in `show'
+
+
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /projects.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /projects.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /application.js - 200 OK (54ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:00 -0400
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:02:04 -0400
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:04 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:02:04 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-10-20 17:02:05 -0400
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (9.7ms)
+  Rendered projects/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:02:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-10-20 17:02:58 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1EF1jsVesj2p5GDq6W/HRmvocrko9n3OvXit8C6tW44=", "project"=>{"title"=>"venmonolpoly.io", "description"=>"gamifed venmo!", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f88b1ea2518 @original_filename="Screen shot 2012-04-17 at 10.51.04 AM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[image]\"; filename=\"Screen shot 2012-04-17 at 10.51.04 AM.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/84/_97zxvx10259xffvb9fjdrvr0000gn/T/RackMultipart20131020-11206-1yrp9ss>>, "remote_image_url"=>""}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `image_will_change!' for #<Project:0x007f88b0a459d0>):
+  app/controllers/projects_controller.rb:43:in `new'
+  app/controllers/projects_controller.rb:43:in `create'
+
+
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jeneisenberg5/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20131020193239)
+Migrating to CreateProjects (20131020193303)
+Migrating to CreateUserProjects (20131020194838)
+Migrating to AddImageToProjects (20131020205640)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "projects" ADD "image" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131020205640')[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (10.2ms)
+  Rendered projects/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 130ms (Views: 66.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /projects.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /users.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:05:05 -0400
+Served asset /projects.js - 200 OK (2ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-10-20 17:05:18 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1EF1jsVesj2p5GDq6W/HRmvocrko9n3OvXit8C6tW44=", "project"=>{"title"=>"venmonolpoly.io", "description"=>"gamified venmo!", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f83ce473ef8 @original_filename="Screen shot 2012-04-17 at 10.51.04 AM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[image]\"; filename=\"Screen shot 2012-04-17 at 10.51.04 AM.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/84/_97zxvx10259xffvb9fjdrvr0000gn/T/RackMultipart20131020-11225-cqmhkx>>, "remote_image_url"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "projects" ("created_at", "description", "image", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 20 Oct 2013 21:05:18 UTC +00:00], ["description", "gamified venmo!"], ["image", "Screen_shot_2012-04-17_at_10.51.04_AM.png"], ["title", "venmonolpoly.io"], ["updated_at", Sun, 20 Oct 2013 21:05:18 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 384ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2013-10-20 17:05:18 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:05:20 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-10-20 17:05:23 -0400
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (2.9ms)
+  Rendered projects/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-10-20 17:05:57 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1EF1jsVesj2p5GDq6W/HRmvocrko9n3OvXit8C6tW44=", "project"=>{"title"=>"Twittevent", "description"=>"twitter api + eventbrite api", "remote_image_url"=>"http://static.ddmcdn.com/gif/twitter-4.jpg"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "image", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 20 Oct 2013 21:05:58 UTC +00:00], ["description", "twitter api + eventbrite api"], ["image", "twitter-4.jpg"], ["title", "Twittevent"], ["updated_at", Sun, 20 Oct 2013 21:05:58 UTC +00:00]]
+  [1m[35m (18.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/4
+Completed 302 Found in 441ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2013-10-20 17:05:58 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered projects/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 100ms (Views: 98.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered projects/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /projects.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:09 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2013-10-20 17:06:15 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /projects.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:16 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered projects/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:17 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:19 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2013-10-20 17:06:20 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2013-10-20 17:06:21 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /projects.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:06:22 -0400
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-10-20 17:06:52 -0400
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (50.3ms)
+  Rendered projects/new.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 375ms (Views: 285.9ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-10-20 17:07:26 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1EF1jsVesj2p5GDq6W/HRmvocrko9n3OvXit8C6tW44=", "project"=>{"title"=>"MHACKS", "description"=>"revamped challengepost", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8d823561e8 @original_filename="Screen shot 2012-03-27 at 9.58.29 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"project[image]\"; filename=\"Screen shot 2012-03-27 at 9.58.29 PM.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/84/_97zxvx10259xffvb9fjdrvr0000gn/T/RackMultipart20131020-11234-wrs6gs>>, "remote_image_url"=>""}, "commit"=>"Create Project"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (23.9ms)[0m  INSERT INTO "projects" ("created_at", "description", "image", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 20 Oct 2013 21:07:26 UTC +00:00], ["description", "revamped challengepost"], ["image", "Screen_shot_2012-03-27_at_9.58.29_PM.png"], ["title", "MHACKS"], ["updated_at", Sun, 20 Oct 2013 21:07:26 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects/5
+Completed 302 Found in 238ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/projects/5" for 127.0.0.1 at 2013-10-20 17:07:26 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered projects/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 130ms (Views: 118.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-10-20 17:07:29 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.4ms)
